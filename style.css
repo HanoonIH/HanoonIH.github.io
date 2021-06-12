@@ -616,8 +616,19 @@ nav li a:last-child:hover {
     flex-direction: column;
     height: initial;
     text-align: center;
+    transition: .2s ease;
 }
-
+.service i {
+    color: var(--gold-color);
+    margin: 30px 0 20px;
+}
+.service:hover {
+    transform: translateY(-10px);
+    background-color: var(--dark-gold-color);
+}
+.service:hover h2, .service:hover p{
+    color: #fff;
+}
 .service-image {
     height: 50%;
 }
@@ -629,7 +640,7 @@ nav li a:last-child:hover {
 }
 
 .service-details h2 {
-    font-family: 'roboto-bold';
+    font-family: 'roboto';
     font-size: 1.6rem;
     margin: 15px 0 10px;
     padding: 0 10px;
@@ -637,6 +648,7 @@ nav li a:last-child:hover {
 
 .service-details p {
     font-size: 1.5rem;
+    font-family: 'roboto-light';
     margin-bottom: 20px;
     padding: 0 10px;
 }
@@ -761,7 +773,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
 
 @media screen and (max-width: 425px) {
     body {
-        margin: 0px 30px;
+        margin: 0px 22px;
         position: relative;
     }
     ::placeholder {
@@ -787,7 +799,8 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     }
     .section-title-rt {
         top: -30px;
-        left: 5%;
+        left: 0;
+        right: 0;
     }
     
     .section-title h2, .section-title-rt h2 {
@@ -834,7 +847,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
 
     /* Hero */
     .hero {
-        padding: 10px 20px;
+        padding: 10px;
     }
     .hero .grid-3 {
         display: block;
@@ -842,9 +855,12 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     .hero-text p {
         font-size: 1.5rem;
     }
+    .hero-text .btn {
+        font-size: 20px;
+    }
     .hero h1 {
-        font-size: 2.3rem;
-        line-height: 50px;
+        font-size: 2.1rem;
+        line-height: 43px;
         text-align: center;
         letter-spacing: 0.01em;
         margin-bottom: 15px;
@@ -880,7 +896,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     }
     .hero-social .social-icons {
         width: 75%;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .hero-social .bar {
         height: 3px;
@@ -892,7 +908,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
 
     /* Testimonial */
     .testimonial {
-        padding: 60px 30px 39px;
+        padding: 60px 24px 30px;
         position: relative;
     }
     .testimonial.grid-3 {
@@ -913,19 +929,19 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     }
     
     .testimonial-text {
-        font-size: 28px;
+        font-size: 25px;
         line-height: 33px;
         margin-bottom: 27px;
     }
     
     .testimonial-image {
-        height: 47px;
+        height: 40px;
         width: 62px;
         margin-right: 10px;
     }
     
     .testimonial-name {
-        font-size: 22px;
+        font-size: 20px;
     }
     
     .testimonial-info {
@@ -934,7 +950,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     
     /* My works */
     .myworks {
-        padding: 54px 32px 38px;
+        padding: 54px 22px 38px;
     }
     
     .work-items.grid {
@@ -960,7 +976,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
 
     /* About me */
     .aboutme {
-        padding: 54px 25px 38px;
+        padding: 54px 22px 38px;
     }
     
     .aboutme p {
@@ -1007,7 +1023,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
 
     /* Services */
     .services {
-        padding: 44px 25px 33px;
+        padding: 44px 22px 33px;
     }
     
     .service-items {
@@ -1019,18 +1035,18 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     }
     
     .service-details h2 {
-        font-size: 1.5rem;
-        margin: 15px 0 12px;
+        font-size: 1.4rem;
+        margin: 15px 0 8px;
     }
     
     .service-details p {
-        font-size: 1.4rem;
-        line-height: 30px;
+        font-size: 1.2rem;
+        line-height: 27px;
     }
 
     /* Contact me */
     .contact {
-        padding: 51px 20px 33px;
+        padding: 51px 18px 33px;
     }
     .contact .section-title h2 {
         padding: 11px 25px;
@@ -1059,12 +1075,12 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     }
     
     .footer-info {
-        font-size: 19px;
+        font-size: 16px;
         margin-bottom: 12px;
     }
     
     .footer-copyright {
-        font-size: 17px;
+        font-size: 15px;
         margin-bottom: 24px;
     }
     

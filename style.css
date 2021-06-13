@@ -1,6 +1,7 @@
 :root {
     --gold-color: #a07d00;
     --dark-gold-color: #7a6000;
+    --light-bg-color: #fffaeb;
     --bg-dark: #171717;
 }
 
@@ -34,6 +35,7 @@
 body {
     margin: 0px 80px;
     position: relative;
+    background-color: var(--light-bg-color);
 }
 
 ::selection {
@@ -160,7 +162,7 @@ p {
 
 .social-icons {
     display: inline-block;
-    border: 3px solid var(--gold-color);
+    border: 4px solid var(--gold-color);
     background-color: #fff;
     color: var(--gold-color);
     padding: 10px 20px;
@@ -218,7 +220,7 @@ p {
 } */
 
 .header {
-    background-color: #fff;
+    background-color: var(--light-bg-color);
     /* display: none; */
     /* position: fixed;  */
     /* z-index: 3;
@@ -355,6 +357,10 @@ p {
     position: absolute;
     z-index: -1;
     top: 35px;
+        left: 50%;
+        top: 50%;
+        margin-left: -50%;
+        margin-top: -2px;
 }
 
 /* NAV SCREEN */
@@ -465,7 +471,8 @@ nav li a:last-child:hover {
 }
 
 .myworks .work {
-    height: 322px;
+    /* height: 322px; */
+    aspect-ratio: 4 / 3;
     background: #FFFFFF;
     border: 4px solid #A07D00;
     box-sizing: border-box;
@@ -611,7 +618,9 @@ nav li a:last-child:hover {
 .service-items {
     gap: 37px;
 }
-
+.service-items.grid-3 {
+    align-items: stretch;
+}
 .service {
     flex-direction: column;
     height: initial;
@@ -651,6 +660,7 @@ nav li a:last-child:hover {
     font-family: 'roboto-light';
     margin-bottom: 20px;
     padding: 0 10px;
+    line-height: 2.2rem;
 }
 
 /* CONTACT */
@@ -755,20 +765,508 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
 
 /* Responsive */
 
-/* Mobile */
+/* Laptop 1024 */
+@media (max-width: 1024px) {
+    body {
+        margin: 0 75px;
+    }
+    ::placeholder {
+        font-size: 32px;
+    }
+    ::-webkit-input-placeholder {
+        font-size: 32px;
+    }
+    .container {
+        /* overflow: hidden; */
+    }
+    .mb-60 {
+        margin-bottom: 45px;
+    }
+    .mb-120 {
+        margin-bottom: 90px;
+    }
+    .my-border {
+        border: 4px solid var(--gold-color);
+    }
+    .section-title {
+        top: -42px;
+    }
+    .section-title-rt {
+        top: -42px;
+    }
+    
+    .section-title h2, .section-title-rt h2 {
+        padding: 15px 55px;
+        font-size: 38px;
+        line-height: 40px;
+    }
+    
+    /* Nav screen */
+    .nav-screen {
+        padding: 100px 0;
+    }
+    
+    nav li a {
+        font-size: 45px;
+        line-height: 70px;
+        letter-spacing: 0.04em;
+    }
+    
+    /* Hero */
+    .hero {
+        padding: 70px;
+    }
+    .hero h1 {
+        font-size: 55px;
+        line-height: 75px;
+        margin-right: 10px;
+    }
+    .hero-social .social-icons {
+        width: 60%;
+        font-size: 1.8rem;
+    }
+    .hero-social .bar {
+        height: 4px;
+    }
+
+    /* Testimonial */
+    .testimonial {
+        padding: 50px 70px;
+    }
+    .testimonial-text {
+        font-size: 32px;
+        line-height: 39px;
+        margin-bottom: 25px;
+    }
+    
+    .testimonial-image {
+        height: 50px;
+        width: 68px;
+        margin-right: 15px;
+    }
+    
+    .testimonial-name {
+        font-size: 25px;
+    }
+    
+    .testimonial-info {
+        font-size: 18px;
+    }
+    
+    /* My works */
+    .myworks {
+        padding: 78px 50px 51px;
+    }
+    
+    .work-items.grid {
+        grid-template-columns: 1fr, 1fr;
+    }
+    .work-items{
+        gap: 50px;
+    }
+    
+    .myworks .work {
+        border: 3px solid #A07D00;
+    }
+    
+    .work-overlay i {
+        font-size: 1.1rem;
+    }
+
+    /* About me */
+    .aboutme {
+        padding: 74px 56px 50PX;
+    }
+    
+    .aboutme p {
+        font-size: 32px;
+        line-height: 41px;
+    }
+    
+    .title-box {
+        padding: 10px 40px;
+        font-size: 23px;
+    }
+    
+    .techs {
+        margin: 35px 0;
+    }
+    
+    .techs i {
+        font-size: 2.5rem;
+        margin-right: 15px;
+    }
+    
+    .tech-pair p {
+        font-size: 25px;
+    }
+    
+    .about-btns {
+        gap: 25px;
+    }
+
+    .about-btns>* {
+        font-size: 30px;
+    }
+
+    /* Services */
+    .services {
+        padding: 74px 72px 53px;
+    }
+    
+    .service-items {
+        gap: 30px;
+    }
+.service {
+    padding: 0 5px;
+}
+    .service-details h2 {
+        font-size: 1.4rem;
+        margin: 15px 0 8px;
+    }
+    
+    .service-details p {
+        font-size: 1.3rem;
+        line-height: 27px;  
+    }
+
+    /* Contact me */
+    .contact {
+        padding: 88px 80px 46px;
+    }
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
+        padding: 18px 0px;
+        margin-bottom: 34px;
+        font-size: 32px;
+        line-height: 35px;
+    }
+    
+    .contact-form input[type=submit] {
+        padding: 8px 55px;
+        font-size: 25px;
+    }
+
+    /* Footer */
+    .footer p {
+        line-height: 25px;
+    }
+    
+    .footer-info {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+    
+    .footer-copyright {
+        font-size: 19px;
+        margin-bottom: 24px;
+    }
+    
+    .footer .hero-social {
+        margin-bottom: 35px;
+    }
+    
+}
+
+/* Tablet */
 
 @media (max-width: 768px) {
     body {
         margin: 0 75px;
     }
-    .hero .grid-3 {
-        grid-template-columns: 1fr;
-        grid-template-areas: 'h' 'i';
+    ::placeholder {
+        font-size: 20px;
     }
+    ::-webkit-input-placeholder {
+        font-size: 20px;
+    }
+    .container {
+        /* overflow: hidden; */
+    }
+    .mb-60 {
+        margin-bottom: 30px;
+    }
+    .mb-120 {
+        margin-bottom: 60px;
+    }
+    .my-border {
+        border: 3px solid var(--gold-color);
+    }
+    .section-title {
+        top: -30px;
+    }
+    .section-title-rt {
+        top: -30px;
+    }
+    
+    .section-title h2, .section-title-rt h2 {
+        padding: 11px 45px;
+        width: -moz-fit-content;
+        font-size: 28px;
+        line-height: 30px;
+    }
+    
+    /* Header */
+    /* .header .grid-3 {
+        padding: 8px 0;
+    } */
+    .header i {
+        font-size: 1.2rem;
+    }
+    .header i:hover {
+        border: 3px solid var(--gold-color);
+    }
+    .header .logo {
+        font-size: 46px;
+        letter-spacing: 3px;
+    }
+    .header .btn {
+        letter-spacing: 1px;
+        padding: 2px 12px;
+    }
+    
+    /* Nav screen */
+    .nav-screen {
+        padding: 100px 0;
+        height: 100vh;
+    }
+    
+    nav li a {
+        font-size: 30px;
+        line-height: 67px;
+        letter-spacing: 0.03em;
+        padding: 0 30px;
+        margin-bottom: 0px;
+    }
+    
+    /* Hero */
+    .hero {
+        padding: 40px;
+    }
+    .hero .grid-3 {
+        display: block;
+    }
+    
     .hero-img, .hero-text {
-        justify-self: center;
         text-align: center;
     }
+    .hero-text .btn {
+        font-size: 20px;
+    }
+    .hero h1 {
+        font-size: 56px;
+        line-height: 67px;
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .hero-img {
+        margin-top: 45px;
+    }
+    .hero-img img {
+        width: 60%;
+    }
+    .hero-img::before, .hero-img::after {
+        position: absolute;
+        z-index: -1;
+        content: '.';
+        color: #C4C4C4;
+        background-color: #C4C4C4;
+    }
+    .hero-img::before {
+        top: -9px;
+        right: 122px;
+        left: 122px;
+    }
+    .hero-img::after {
+        bottom: -4px;
+        right: 122px;
+        left: 122px;
+    }
+    .hero-img-bg {
+        display: none;
+    }
+    .social-icons {
+        border: 3px solid var(--gold-color);
+    }
+    .hero-social .social-icons {
+        width: 70%;
+        font-size: 1.5rem;
+    }
+    .hero-social .bar {
+        height: 3px;
+    }
+
+    /* Testimonial */
+    .testimonial {
+        padding: 30px 40px 30px;
+        position: relative;
+    }
+    .testimonial.grid-3 {
+        grid-template-columns: 1fr;
+    }
+    #testimonialIconMobile {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        top: 0;
+    }
+    #testimonialIconL {
+        display: none;
+    }
+    .testimonial-content {
+        grid-column: 1;
+    }
+    
+    .testimonial-text {
+        font-size: 27px;
+        line-height: 34px;
+        margin-bottom: 25px;
+    }
+    
+    .testimonial-image {
+        height: 40px;
+        width: 62px;
+        margin-right: 15px;
+    }
+    
+    .testimonial-name {
+        font-size: 20px;
+    }
+    
+    .testimonial-info {
+        font-size: 14px;
+    }
+    
+    /* My works */
+    .myworks {
+        padding: 58px 30px 32px;
+    }
+    
+    .work-items.grid {
+        grid-template-columns: 1fr, 1fr;
+    }
+    .work-items{
+        gap: 30px;
+    }
+    
+    .myworks .work {
+        border: 2px solid #A07D00;
+    }
+    
+    .work-name {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    
+    .work-overlay i {
+        font-size: 1rem;
+    }
+
+    /* About me */
+    .aboutme {
+        padding: 54px 26px 32px;
+    }
+    
+    .aboutme p {
+        font-size: 23px;
+        line-height: 30px;
+    }
+    
+    .title-box {
+        padding: 10px 30px;
+        font-size: 19px;
+        letter-spacing: 0.03rem;
+        margin: 30px auto 0;
+    }
+    
+    .techs {
+        margin: 30px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .techs i {
+        font-size: 1.4rem;
+        margin-right: 10px;
+    }
+    
+    .tech-pair p {
+        font-size: 19px;
+    }
+    
+    .about-btns {
+        gap: 19px;
+    }
+    
+    .about-btns.grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .about-btns>* {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+
+    /* Services */
+    .services {
+        padding: 44px 22px 33px;
+    }
+    
+    .service-items {
+        gap: 25px;
+    }
+    .service-items.grid-3 {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px 0 0;
+    }
+    
+    .service-details h2 {
+        font-size: 1.4rem;
+        margin: 15px 0 8px;
+    }
+    
+    .service-details p {
+        font-size: 1.2rem;
+        line-height: 27px;
+    }
+
+    /* Contact me */
+    .contact {
+        padding: 58px 50px 36px;
+    }
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
+        padding: 15.72px 0px;
+        margin-bottom: 24px;
+        font-size: 22px;
+        line-height: 30px;
+    }
+    
+    .contact-form input[type=submit] {
+        padding: 0 27px;
+        font-size: 20px;
+    }
+
+    /* Footer */
+    .footer p {
+        line-height: 25px;
+    }
+    
+    .footer-info {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+    
+    .footer-copyright {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+    
+    .footer .hero-social {
+        margin-bottom: 25px;
+    }
+    
 }
 
 @media screen and (max-width: 425px) {
@@ -794,9 +1292,6 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     .social-icons>* {
         margin: 0 5px;
     }
-    .section-title {
-        top: -30px;
-    }
     .section-title-rt {
         top: -30px;
         left: 0;
@@ -804,11 +1299,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     }
     
     .section-title h2, .section-title-rt h2 {
-        padding: 11px 45px;
-        /* width: calc(100% - 30px); */
-        width: -moz-fit-content;
         font-size: 25px;
-        line-height: 30px;
     }
     
     /* Header */
@@ -834,7 +1325,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     /* Nav screen */
     .nav-screen {
         padding: 100px 0;
-        height: 100vh;
+        height: fit-content;
     }
     
     nav li a {
@@ -891,9 +1382,6 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
         right: 22px;
         left: 22px;
     }
-    .hero-img-bg {
-        display: none;
-    }
     .hero-social .social-icons {
         width: 75%;
         font-size: 1.3rem;
@@ -909,23 +1397,6 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     /* Testimonial */
     .testimonial {
         padding: 60px 24px 30px;
-        position: relative;
-    }
-    .testimonial.grid-3 {
-        grid-template-columns: 1fr;
-    }
-    #testimonialIconMobile {
-        display: block;
-        position: absolute;
-        z-index: -1;
-        right: 0;
-        top: 0;
-    }
-    #testimonialIconL {
-        display: none;
-    }
-    .testimonial-content {
-        grid-column: 1;
     }
     
     .testimonial-text {
@@ -935,17 +1406,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     }
     
     .testimonial-image {
-        height: 40px;
-        width: 62px;
-        margin-right: 10px;
-    }
-    
-    .testimonial-name {
-        font-size: 20px;
-    }
-    
-    .testimonial-info {
-        font-size: 14px;
+       margin-right: 10px;
     }
     
     /* My works */
@@ -959,20 +1420,6 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     .work-items{
         gap: 28px;
     }
-    
-    .myworks .work {
-        height: 200px;
-        border: 2px solid #A07D00;
-    }
-    
-    .work-name {
-        font-size: 1.5rem;
-        margin-bottom: 5px;
-    }
-    
-    .work-overlay i {
-        font-size: 1rem;
-    }
 
     /* About me */
     .aboutme {
@@ -982,20 +1429,6 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     .aboutme p {
         font-size: 21px;
         line-height: 24px;
-    }
-    
-    .title-box {
-        padding: 10px 30px;
-        font-size: 19px;
-        letter-spacing: 0.03rem;
-        margin: 30px auto 0;
-    }
-    
-    .techs {
-        margin: 30px 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
     }
     
     .techs i {
@@ -1010,16 +1443,6 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     .about-btns {
         gap: 14px;
     }
-    
-    .about-btns.grid {
-        grid-template-columns: 1fr;
-        padding: 0;
-    }
-
-    .about-btns>* {
-        font-size: 25px;
-        letter-spacing: 2px;
-    }
 
     /* Services */
     .services {
@@ -1032,16 +1455,6 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     .service-items.grid-3 {
         grid-template-columns: 1fr;
         padding: 10px 0 0;
-    }
-    
-    .service-details h2 {
-        font-size: 1.4rem;
-        margin: 15px 0 8px;
-    }
-    
-    .service-details p {
-        font-size: 1.2rem;
-        line-height: 27px;
     }
 
     /* Contact me */
@@ -1086,19 +1499,6 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     
     .footer .hero-social {
         margin-bottom: 25px;
-    }
-    
-    .btt {
-        text-align: center;
-    }
-    
-    .btt .btn-gold {
-        border: none;
-    }
-    
-    .btt .btn-gold:hover {
-        background-color: var(--dark-gold-color);
-        color: #fff;
     }
     
     

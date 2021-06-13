@@ -12,6 +12,13 @@ window.onload = () => {
         item.addEventListener('click', closeNavScreen);
     });
 
+    // document.querySelector('body .testimonial').addEventListener('click', () => {
+    //     // navScreen.style.backgroundColor = 'red';
+    //     if(navScreen.style.visibility == 'visible') {
+    //         closeNavScreen();
+    //     }        
+    // });
+
     function openNavScreen() {
         navScreen.style.visibility = 'visible';
         menuIcon.style.display = 'none';
@@ -32,8 +39,6 @@ window.onload = () => {
             document.getElementById('hireBtn').innerHTML = 'Hire';
         } else {
             document.getElementById('hireBtn').innerHTML = 'Hire Me';
-
-        
         }
     }
     changeText(mobileScreen);

@@ -210,26 +210,22 @@ p {
 
 /* HEADER */
 
-/* .top {
-    position: fixed;
-    z-index: 3;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-
-} */
-
 .header {
     background-color: var(--light-bg-color);
-    /* display: none; */
-    /* position: fixed;  */
-    /* z-index: 3;
-    top: 0;     
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%; */
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 80px;
+    transition: .5s;
 }
-
+.header.scroll .grid-3 {
+    padding: 10px 0;
+}
+.header.scroll {
+    border-bottom: 0.1px solid var(--gold-color);
+}
 
 .header .grid-3 {
     padding: 20px 0;
@@ -256,6 +252,7 @@ p {
 }
 
 .header .logo {
+    color: var(--bg-dark);
     font-size: 60px;
     font-family: 'vidaloka';
     font-weight: 500;
@@ -277,7 +274,7 @@ p {
 
 .hero {
     padding: 70px 120px;
-    /* margin-top: 100px; */
+    margin-top: 112px;
 }
 
 .hero .grid-3 {
@@ -752,17 +749,6 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     color: #fff;
 }
 
-/* Animation */
-
-@keyframes slideInFromBottom {
-    0% {
-        transform: skewY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
 /* Responsive */
 
 /* Laptop 1024 */
@@ -801,6 +787,10 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
         line-height: 40px;
     }
     
+    /* Header */
+    .header {
+        margin: 0 75px;
+    }
     /* Nav screen */
     .nav-screen {
         padding: 100px 0;
@@ -815,6 +805,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     /* Hero */
     .hero {
         padding: 70px;
+        margin-top: 112px;
     }
     .hero h1 {
         font-size: 55px;
@@ -1006,9 +997,9 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     }
     
     /* Header */
-    /* .header .grid-3 {
-        padding: 8px 0;
-    } */
+    .header {
+        margin: 0 75px;
+    }
     .header i {
         font-size: 1.2rem;
     }
@@ -1041,6 +1032,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     /* Hero */
     .hero {
         padding: 40px;
+        margin-top: 96px;
     }
     .hero .grid-3 {
         display: block;
@@ -1303,8 +1295,14 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     }
     
     /* Header */
+    .header {
+        margin: 0 22px ;
+    }
     .header .grid-3 {
         padding: 8px 0;
+    }
+    .header.scroll .grid-3 {
+        padding: 4px 0;
     }
     .header i {
         font-size: 1rem;
@@ -1339,6 +1337,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     /* Hero */
     .hero {
         padding: 10px;
+        margin-top: 65px;
     }
     .hero .grid-3 {
         display: block;

@@ -11,7 +11,11 @@ window.onload = () => {
     navItems.forEach(item => {
         item.addEventListener('click', closeNavScreen);
     });
-
+    document.onclick = (e) => {
+        if(e.target !== menuIcon && e.target !== navScreen) {
+            closeNavScreen()
+        }
+    } 
     // document.querySelector('body .testimonial').addEventListener('click', () => {
     //     // navScreen.style.backgroundColor = 'red';
     //     if(navScreen.style.visibility == 'visible') {
@@ -44,3 +48,8 @@ window.onload = () => {
     changeText(mobileScreen);
     mobileScreen.addListener(changeText);
 }
+
+window.addEventListener('scroll', () => {
+    var header = document.querySelector('.header');
+    header.classList.toggle('scroll', window.scrollY > 0);
+})

@@ -6,6 +6,7 @@ window.onload = () => {
     var closeIcon = document.querySelector('#closeIcon');
     var navScreen = document.getElementById('navScreen');
     var navItems = document.querySelectorAll('nav li a');
+    var toggleDarkTheme = document.getElementById('toggleDarkTheme');
 
     menuIcon.addEventListener('click', () => {
         openNavScreen();
@@ -69,4 +70,14 @@ window.onload = () => {
     window.addEventListener('scroll', () => {
         header.classList.toggle('scroll', window.scrollY > 0);
     })
+
+    // Dark theme
+    toggleDarkTheme.addEventListener('click', () => {
+        document.body.classList.toggle('dark-theme');
+        if(document.body.classList.contains('dark-theme')) {
+            toggleDarkTheme.innerHTML = 'Light Theme';            
+        } else {
+            toggleDarkTheme.innerHTML = 'Dark Theme';            
+        }
+    } );
 }

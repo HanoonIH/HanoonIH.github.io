@@ -1,9 +1,3 @@
-:root {
-    --gold-color: #a07d00;
-    --dark-gold-color: #7a6000;
-    --light-bg-color: #fffaeb;
-    --bg-dark: #171717;
-}
 
 @font-face {
     font-family: "vidaloka";
@@ -25,6 +19,26 @@
     src: url(./fonts/Roboto-Bold.ttf);
 }
 
+:root {
+    --gold-color: #a07d00;
+    --dark-gold-color: #7a6000;
+    --light-bg-color: #fffaeb;
+    --bg-dark: #171717;
+    --dark: #000;
+    --white: #fff;
+    --input-bg: rgba(217, 207, 174, 0.57);
+}
+
+.dark-theme {
+    --gold-color: #ca9e00;
+    --dark-gold-color: #7a6000;
+    --light-bg-color: #181610;
+    --bg-dark: #171717;
+    --dark: rgb(255, 255, 255);
+    --white: #000;
+    --input-bg: rgba(90, 90, 90, 0.57);
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -39,7 +53,7 @@ body {
 }
 
 ::selection {
-    color: #fff;
+    color: var(--white);
     background-color: var(--gold-color);
 }
 
@@ -73,10 +87,12 @@ a {
 
 h1, h2, h3 {
     font-family: 'vidaloka';
+    color: var(--dark);
 }
 
 p {
     font-family: 'roboto';
+    color: var(--dark);
 }
 
 .container {
@@ -125,7 +141,7 @@ p {
 }
 
 .btn-gold {
-    color: #fff;
+    color: var(--white);
     background-color: var(--gold-color);
     border: 3px solid var(--gold-color);
 }
@@ -137,7 +153,7 @@ p {
 
 .btn-gold:hover {
     color: var(--gold-color);
-    background-color: #fff;
+    background-color: var(--light-bg-color);
     border: 3px solid var(--gold-color);
     border-style: solid;
     transition: .2s ease-in;
@@ -155,7 +171,7 @@ p {
 }
 
 .btn-outline:hover {
-    color: #fff;
+    color: var(--white);
     background-color: var(--gold-color);
     transition: .2s ease-in;
 }
@@ -163,7 +179,7 @@ p {
 .social-icons {
     display: inline-block;
     border: 4px solid var(--gold-color);
-    background-color: #fff;
+    background-color: var(--light-bg-color);
     color: var(--gold-color);
     padding: 10px 20px;
     text-align: center;
@@ -185,7 +201,7 @@ p {
 
 .section-title h2, .section-title-rt h2 {
     padding: 15px 115px;
-    background-color: #fff;
+    background-color: var(--light-bg-color);
     margin: auto;
     width: fit-content;
     width: -moz-fit-content;
@@ -234,7 +250,7 @@ p {
 }
 
 .header i {
-    color: #fff;
+    color: var(--white);
     background-color: var(--gold-color);
     border: 3px solid var(--gold-color);
     font-size: 1.5rem;
@@ -245,7 +261,7 @@ p {
 
 .header i:hover {
     color: var(--gold-color);
-    background-color: #fff;
+    background-color: var(--white);
     border: 3px solid var(--gold-color);
 }
 
@@ -254,7 +270,7 @@ p {
 }
 
 .header .logo {
-    color: var(--bg-dark);
+    color: var(--dark);
     font-size: 60px;
     font-family: 'vidaloka';
     font-weight: 500;
@@ -394,7 +410,7 @@ nav li {
 
 nav li a {
     text-decoration: none;
-    color: var(--bg-dark);
+    color: var(--dark);
     font-family: 'vidaloka';
     font-size: 55px;
     font-style: normal;
@@ -408,13 +424,13 @@ nav li a {
 }
 
 nav li a:hover {
-    background-color: #fff;
-    color: var(--bg-dark);
+    background-color: var(--light-bg-color);
+    color: var(--dark);
 }
 
 nav li a:last-child:hover {
-    background-color: var(--bg-dark);
-    color: #fff;
+    background-color: var(--dark);
+    color: var(--white);
 }
 
 /* TESTIMONIAL */
@@ -481,7 +497,7 @@ nav li a:last-child:hover {
 .myworks .work {
     /* height: 322px; */
     aspect-ratio: 4 / 3;
-    background: #FFFFFF;
+    background: var(--white);
     border: 4px solid #A07D00;
     box-sizing: border-box;
     position: relative;
@@ -514,7 +530,7 @@ nav li a:last-child:hover {
     background-color: var(--gold-color);
     padding: 10px 0;
     text-align: center;
-    color: #fff;
+    color: var(--light-bg-color);
     overflow: hidden;
     width: 100%;
     height: 0;
@@ -696,7 +712,7 @@ nav li a:last-child:hover {
     border: 0;
     padding: 22px 0px;
     margin-bottom: 44px;
-    background-color: rgba(217, 207, 174, 0.57);
+    background-color: var(--input-bg);
     border-bottom: 4px solid var(--gold-color);
     font-family: Vidaloka;
     font-size: 40px;

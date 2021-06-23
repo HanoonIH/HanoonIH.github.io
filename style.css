@@ -77,6 +77,16 @@ body {
     text-align: center;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    /* margin: 0; */
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
 :focus {
     outline: none;
 }
@@ -347,6 +357,8 @@ p {
 .hero-img img {
     width: 320px;
     height: 400px;
+    object-fit: cover;
+    transform: scale(1);
 }
 
 .hero-social {
@@ -358,8 +370,11 @@ p {
     width: 45%;
     font-size: 2.5rem;
 }
+.hero-social .social-icons > * {
+    color: var(--gold-color);
+}
 
-.hero-social .social-icons>*:hover {
+.hero-social .social-icons>* i:hover {
     color: var(--dark-gold-color);
     transition: .2s ease;
     transform: translateY(-5px);
@@ -496,7 +511,7 @@ nav li a:last-child:hover {
 
 .myworks .work {
     /* height: 322px; */
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 311 / 196;
     background: var(--white);
     border: 4px solid #A07D00;
     box-sizing: border-box;
@@ -518,6 +533,7 @@ nav li a:last-child:hover {
 .work img {
     width: 100%;
     height: 100%;
+    object-fit: fill;
     filter: grayscale(100%);
     transition: .5s ease;
 }
@@ -569,10 +585,10 @@ nav li a:last-child:hover {
 
 .aboutme p {
     font-family: Roboto;
-    font-size: 45px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 400;
-    line-height: 55px;
+    line-height: 50px;
     letter-spacing: 0.05em;
     text-align: left;
 }
@@ -604,9 +620,9 @@ nav li a:last-child:hover {
 
 .techs i {
     color: var(--gold-color);
-    font-size: 3rem;
+    font-size: 1.9rem;
     display: inline;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .tech-pair {
@@ -615,7 +631,7 @@ nav li a:last-child:hover {
 }
 
 .tech-pair p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     line-height: initial;
     font-weight: bold;
 }
@@ -648,14 +664,35 @@ nav li a:last-child:hover {
 }
 
 .service {
+    padding: 0 10px 5px;
     flex-direction: column;
     height: initial;
     text-align: center;
     transition: .2s ease;
 }
 
+.service-cta {
+    background-color: var(--dark-gold-color);
+    border-color: var(--dark-gold-color);
+    padding-bottom: 20px;
+}
+
+.service-cta .btn {
+    background-color: #fff;
+    border-color: #fff;
+}
+.service-cta .btn:hover {
+    /* background-color: white; */
+    color: inherit;
+    font-size: calc(100% + 2px);
+    transition: .3s ease-in;
+}
 .service i {
     color: var(--gold-color);
+    margin: 30px 0 20px;
+}
+.service-cta i {
+    color: #fff;
     margin: 30px 0 20px;
 }
 
@@ -664,7 +701,7 @@ nav li a:last-child:hover {
     background-color: var(--dark-gold-color);
 }
 
-.service:hover h2, .service:hover p {
+.service:hover h2, .service:hover p, .service-cta h2, .service-cta p {
     color: #fff;
 }
 
@@ -686,11 +723,11 @@ nav li a:last-child:hover {
 }
 
 .service-details p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: 'roboto-light';
     margin-bottom: 20px;
     padding: 0 10px;
-    line-height: 2.2rem;
+    line-height: 2rem;
 }
 
 /* CONTACT */
@@ -708,7 +745,7 @@ nav li a:last-child:hover {
     padding: 0;
 }
 
-.contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
+.contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], .contact-form textarea {
     border: 0;
     padding: 22px 0px;
     margin-bottom: 44px;
@@ -723,12 +760,12 @@ nav li a:last-child:hover {
     text-align: center;
 }
 
-input[type=text]:focus, input[type=email]:focus, textarea:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, textarea:focus {
     background-color: var(--dark-gold-color);
     color: #fff;
 }
 
-input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, textarea:focus::placeholder {
+input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input[type=number]:focus::placeholder, textarea:focus::placeholder {
     color: #fff;
 }
 
@@ -923,6 +960,9 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     .service {
         padding: 0 5px;
     }
+    .service-cta {
+        padding-bottom: 20px;
+    }
     .service-details h2 {
         font-size: 1.4rem;
         margin: 15px 0 8px;
@@ -935,7 +975,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     .contact {
         padding: 88px 80px 46px;
     }
-    .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], .contact-form textarea {
         padding: 18px 0px;
         margin-bottom: 34px;
         font-size: 32px;
@@ -1135,7 +1175,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
         border: 2px solid #A07D00;
     }
     .work-name {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-bottom: 5px;
     }
     .work-overlay i {
@@ -1195,14 +1235,14 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
         margin: 15px 0 8px;
     }
     .service-details p {
-        font-size: 1.2rem;
-        line-height: 27px;
+        font-size: 1.1rem;
+        line-height: 25px;
     }
     /* Contact me */
     .contact {
         padding: 58px 50px 36px;
     }
-    .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], .contact-form textarea {
         padding: 15.72px 0px;
         margin-bottom: 24px;
         font-size: 22px;
@@ -1382,8 +1422,8 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
         padding: 54px 22px 38px;
     }
     .aboutme p {
-        font-size: 21px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 30px;
     }
     .techs i {
         font-size: 1.3rem;
@@ -1413,7 +1453,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, texta
     .contact .section-title h2 {
         padding: 11px 25px;
     }
-    .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea {
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], .contact-form textarea {
         padding: 10.72px 0px;
         margin-bottom: 22px;
         border-bottom: 3px solid var(--gold-color);

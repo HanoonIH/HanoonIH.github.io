@@ -11,7 +11,7 @@ window.onload = () => {
     menuIcon.addEventListener('click', () => {
         openNavScreen();
     });
-    closeIcon.addEventListener('click',  () => {
+    closeIcon.addEventListener('click', () => {
         closeNavScreen();
     });
     navItems.forEach(item => {
@@ -20,7 +20,7 @@ window.onload = () => {
         });
     });
     document.onclick = (e) => {
-        if(e.target !== menuIcon && e.target !== navScreen) {
+        if (e.target !== menuIcon && e.target !== navScreen) {
             closeNavScreen();
         }
     }
@@ -33,12 +33,12 @@ window.onload = () => {
         disableScroll();
         console.log('done');
     }
-    
+
     function closeNavScreen() {
         navScreen.style.visibility = 'hidden';
         closeIcon.style.display = 'none';
         menuIcon.style.display = 'block';
-        if(window.scrollY > 0) {
+        if (window.scrollY > 0) {
             header.classList.add('scroll');
         }
         enableScroll();
@@ -57,7 +57,7 @@ window.onload = () => {
     // Hire button text change in mobile
     var mobileScreen = window.matchMedia("(max-width: 425px)");
     function changeText(mobileScreen) {
-        if(mobileScreen.matches) {
+        if (mobileScreen.matches) {
             document.getElementById('hireBtn').innerHTML = 'Hire';
         } else {
             document.getElementById('hireBtn').innerHTML = 'Hire Me';
@@ -74,10 +74,13 @@ window.onload = () => {
     // Dark theme
     toggleDarkTheme.addEventListener('click', () => {
         document.body.classList.toggle('dark-theme');
-        if(document.body.classList.contains('dark-theme')) {
-            toggleDarkTheme.innerHTML = 'Light Theme';            
+        if (document.body.classList.contains('dark-theme')) {
+            toggleDarkTheme.innerHTML = 'Light Theme';
         } else {
-            toggleDarkTheme.innerHTML = 'Dark Theme';            
+            toggleDarkTheme.innerHTML = 'Dark Theme';
         }
-    } );
+    });
 }
+
+
+

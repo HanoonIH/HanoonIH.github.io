@@ -8,7 +8,9 @@
     <title>Hanoon IH | Full Stack Web developer</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../fontawesome-free-5.15.3-web/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="script.js"></script>
 </head>
 
@@ -17,10 +19,12 @@
     <!-- Header -->
     <div class="header ">
         <div class="container grid-3">
-        <i class="fas fa-bars" id="menuIcon"></i>
-        <i class="fas fa-window-close" id="closeIcon"></i>
-        <a href="#"><h1 class="logo">HIH</h1></a>
-        <p><a href="#" id="hireBtn" class="btn btn-gold">Hire Me</a></p>
+            <i class="fas fa-bars" id="menuIcon"></i>
+            <i class="fas fa-window-close" id="closeIcon"></i>
+            <a href="#">
+                <h1 class="logo">HIH</h1>
+            </a>
+            <p><a href="#contact" id="hireBtn" class="btn btn-gold">Hire Me</a></p>
         </div>
     </div>
 
@@ -66,32 +70,35 @@
             </div>
             <div class="hero-img">
                 <div class="hero-img-bg"></div>
-                <img src="images/image1.png" alt="">
+                <img src="images/me1.jpg" alt="">
             </div>
         </div>
     </section>
 
 
     <!-- Social icons -->
-    <div class="hero-social mb-60">
+    <div class="hero-social mb-120">
         <div class="bar"></div>
         <div class="social-icons">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-github"></i>
-            <i class="fab fa-linkedin"></i>
-            <i class="fab fa-twitter"></i>
+            <a href="https://www.instagram.com/hanoonih/" target="_blank"> <i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/HanoonIH" target="_blank"> <i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/hanoonih/" target="_blank"> <i class="fab fa-linkedin"></i></a>
+            <!-- <a href="https://twitter.com/hanoon_ih" target="_blank"> <i class="fab fa-twitter"></i></a> -->
+            <a href="mailto:hanoonih123@gmail.com" target="_blank"> <i class="fas fa-envelope"></i></a>
         </div>
     </div>
 
     <!-- testimonial -->
-    <section class="testimonial container my-border grid-3 mb-120">
+    <section class="testimonial container my-border grid-3 mb-120" style="display: none;">
         <div>
-            <svg id="testimonialIconL" width="209" height="209" viewBox="0 0 209 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="testimonialIconL" width="209" height="209" viewBox="0 0 209 209" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M52.25 20.9C55.0215 20.9 57.6795 22.001 59.6393 23.9608C61.599 25.9205 62.7 28.5785 62.7 31.35V41.8H73.15C75.9215 41.8 78.5795 42.901 80.5393 44.8608C82.499 46.8205 83.6 49.4785 83.6 52.25C83.6 55.0215 82.499 57.6795 80.5393 59.6393C78.5795 61.599 75.9215 62.7 73.15 62.7H62.7V73.15C62.7 75.9215 61.599 78.5795 59.6393 80.5393C57.6795 82.499 55.0215 83.6 52.25 83.6C49.4785 83.6 46.8205 82.499 44.8607 80.5393C42.901 78.5795 41.8 75.9215 41.8 73.15V62.7H31.35C28.5785 62.7 25.9205 61.599 23.9607 59.6393C22.001 57.6795 20.9 55.0215 20.9 52.25C20.9 49.4785 22.001 46.8205 23.9607 44.8608C25.9205 42.901 28.5785 41.8 31.35 41.8H41.8V31.35C41.8 28.5785 42.901 25.9205 44.8607 23.9608C46.8205 22.001 49.4785 20.9 52.25 20.9ZM52.25 125.4C55.0215 125.4 57.6795 126.501 59.6393 128.461C61.599 130.421 62.7 133.078 62.7 135.85V146.3H73.15C75.9215 146.3 78.5795 147.401 80.5393 149.361C82.499 151.32 83.6 153.979 83.6 156.75C83.6 159.522 82.499 162.18 80.5393 164.139C78.5795 166.099 75.9215 167.2 73.15 167.2H62.7V177.65C62.7 180.422 61.599 183.08 59.6393 185.039C57.6795 186.999 55.0215 188.1 52.25 188.1C49.4785 188.1 46.8205 186.999 44.8607 185.039C42.901 183.08 41.8 180.422 41.8 177.65V167.2H31.35C28.5785 167.2 25.9205 166.099 23.9607 164.139C22.001 162.18 20.9 159.522 20.9 156.75C20.9 153.979 22.001 151.32 23.9607 149.361C25.9205 147.401 28.5785 146.3 31.35 146.3H41.8V135.85C41.8 133.078 42.901 130.421 44.8607 128.461C46.8205 126.501 49.4785 125.4 52.25 125.4ZM125.4 20.9C127.706 20.8993 129.948 21.6614 131.776 23.0677C133.603 24.474 134.915 26.4455 135.505 28.6748L147.826 75.24L182.875 95.4503C184.463 96.3675 185.783 97.6867 186.7 99.2752C187.617 100.864 188.1 102.666 188.1 104.5C188.1 106.334 187.617 108.136 186.7 109.725C185.783 111.313 184.463 112.632 182.875 113.55L147.826 133.77L135.495 180.325C134.903 182.552 133.592 184.522 131.766 185.926C129.939 187.331 127.699 188.093 125.395 188.093C123.09 188.093 120.851 187.331 119.024 185.926C117.197 184.522 115.886 182.552 115.295 180.325L102.974 133.76L67.925 113.55C66.3365 112.632 65.0175 111.313 64.1004 109.725C63.1833 108.136 62.7005 106.334 62.7005 104.5C62.7005 102.666 63.1833 100.864 64.1004 99.2752C65.0175 97.6867 66.3365 96.3675 67.925 95.4503L102.974 75.2296L115.305 28.6748C115.895 26.4472 117.205 24.477 119.031 23.0709C120.856 21.6648 123.096 20.9016 125.4 20.9Z"
                     fill="#A07D00" fill-opacity="0.86" />
             </svg>
-            <svg id="testimonialIconMobile" width="127" height="104" viewBox="0 0 127 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg id="testimonialIconMobile" width="127" height="104" viewBox="0 0 127 104" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M52.25 -84.1C55.0215 -84.1 57.6795 -82.999 59.6393 -81.0392C61.599 -79.0795 62.7 -76.4215 62.7 -73.65V-63.2H73.15C75.9215 -63.2 78.5795 -62.099 80.5393 -60.1392C82.499 -58.1795 83.6 -55.5215 83.6 -52.75C83.6 -49.9785 82.499 -47.3205 80.5393 -45.3607C78.5795 -43.401 75.9215 -42.3 73.15 -42.3H62.7V-31.85C62.7 -29.0785 61.599 -26.4205 59.6393 -24.4607C57.6795 -22.501 55.0215 -21.4 52.25 -21.4C49.4785 -21.4 46.8205 -22.501 44.8607 -24.4607C42.901 -26.4205 41.8 -29.0785 41.8 -31.85V-42.3H31.35C28.5785 -42.3 25.9205 -43.401 23.9607 -45.3607C22.001 -47.3205 20.9 -49.9785 20.9 -52.75C20.9 -55.5215 22.001 -58.1795 23.9607 -60.1392C25.9205 -62.099 28.5785 -63.2 31.35 -63.2H41.8V-73.65C41.8 -76.4215 42.901 -79.0795 44.8607 -81.0392C46.8205 -82.999 49.4785 -84.1 52.25 -84.1ZM52.25 20.4C55.0215 20.4 57.6795 21.501 59.6393 23.4607C61.599 25.4205 62.7 28.0785 62.7 30.85V41.3H73.15C75.9215 41.3 78.5795 42.401 80.5393 44.3607C82.499 46.3205 83.6 48.9785 83.6 51.75C83.6 54.5215 82.499 57.1795 80.5393 59.1393C78.5795 61.099 75.9215 62.2 73.15 62.2H62.7V72.65C62.7 75.4215 61.599 78.0795 59.6393 80.0393C57.6795 81.999 55.0215 83.1 52.25 83.1C49.4785 83.1 46.8205 81.999 44.8607 80.0393C42.901 78.0795 41.8 75.4215 41.8 72.65V62.2H31.35C28.5785 62.2 25.9205 61.099 23.9607 59.1393C22.001 57.1795 20.9 54.5215 20.9 51.75C20.9 48.9785 22.001 46.3205 23.9607 44.3607C25.9205 42.401 28.5785 41.3 31.35 41.3H41.8V30.85C41.8 28.0785 42.901 25.4205 44.8607 23.4607C46.8205 21.501 49.4785 20.4 52.25 20.4ZM125.4 -84.1C127.706 -84.1007 129.948 -83.3386 131.776 -81.9323C133.603 -80.526 134.915 -78.5545 135.505 -76.3252L147.826 -29.76L182.875 -9.54968C184.463 -8.63247 185.783 -7.3133 186.7 -5.72475C187.617 -4.13621 188.1 -2.33425 188.1 -0.499985C188.1 1.33428 187.617 3.13624 186.7 4.72478C185.783 6.31333 184.463 7.6325 182.875 8.54971L147.826 28.7705L135.495 75.3252C134.903 77.5524 133.592 79.5216 131.766 80.9265C129.939 82.3313 127.699 83.093 125.395 83.093C123.09 83.093 120.851 82.3313 119.024 80.9265C117.197 79.5216 115.886 77.5524 115.295 75.3252L102.974 28.76L67.925 8.54971C66.3365 7.6325 65.0175 6.31333 64.1004 4.72478C63.1833 3.13624 62.7005 1.33428 62.7005 -0.499985C62.7005 -2.33425 63.1833 -4.13621 64.1004 -5.72475C65.0175 -7.3133 66.3365 -8.63247 67.925 -9.54968L102.974 -29.7704L115.305 -76.3252C115.895 -78.5528 117.205 -80.523 119.031 -81.9291C120.856 -83.3352 123.096 -84.0984 125.4 -84.1Z"
                     fill="#A07D00" fill-opacity=".33" />
@@ -120,66 +127,51 @@
         </div>
         <div class="work-items grid">
             <div class="work">
-                <img src="images/sellme1.png" alt="">
-                <div class="work-overlay">
-                    <div class="overlay-content">
-                        <p class="work-name">Sellme.</p>
-                        <p>An amazing hosting service.</p>
-                        <i class="fab fa-html5"></i>
+                <a href="https://knmmadrasa.netlify.app/" target="_blank">
+                    <img src="images/Screenshot_2021-06-22 Madrasa.png"
+                        alt="KNM  online madrasa all videos @ one place app.">
+                    <div class="work-overlay">
+                        <div class="overlay-content">
+                            <p class="work-name">KNM Online Madrasa app</p>
+                            <!-- <i class="fab fa-html5"></i>
                         <i class="fab fa-js"></i>
-                        <i class="fab fa-css3"></i>
+                        <i class="fab fa-css3"></i> -->
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="work">
-                <img src="images/hanoonih.png" alt="">
-                <div class="work-overlay">
-                    <div class="overlay-content">
-                        <p class="work-name">HIH</p>
-                        <i class="fab fa-figma"></i>
+                <a href="https://hanoonih.github.io/Covid19-India-live-statistics/" target="_blank">
+                    <img src="images/Screenshot_2021-06-22 Covid-19-India Live.png" alt="Covid-19 India Live Tracker.">
+                    <div class="work-overlay">
+                        <div class="overlay-content">
+                            <p class="work-name">Covid-19 India Live Tracker</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="work">
-                <img src="images/sellme1.png" alt="">
-                <div class="work-overlay">
-                    <div class="overlay-content">
-                        <p class="work-name">Sellme.</p>
-                        <i class="fab fa-html5"></i>
-                        <i class="fab fa-js"></i>
-                        <i class="fab fa-css3"></i>
+                <a href="#" target="_blank">
+                    <img src="images/Screenshot_Hanoon-IH-Full-Stack-Web-developer.png"
+                    alt="My personal portfolio website.">
+                    <div class="work-overlay">
+                        <div class="overlay-content">
+                            <p class="work-name">My Personal Website</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="work">
-                <img src="images/hanoonih.png" alt="">
-                <div class="work-overlay">
-                    <div class="overlay-content">
-                        <p class="work-name">HIH</p>
-                        <i class="fab fa-figma"></i>
+                <a href="https://hanoonih.github.io/" target="_blank">
+                    <img src="images/Screenshot_2021-06-22 Hanoon Ibn Haneef.png" alt="My first website">
+                    <div class="work-overlay">
+                        <div class="overlay-content">
+                            <p class="work-name">My First Website</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-            <div class="work">
-                <img src="images/sellme1.png" alt="">
-                <div class="work-overlay">
-                    <div class="overlay-content">
-                        <p class="work-name">Sellme.</p>
-                        <i class="fab fa-html5"></i>
-                        <i class="fab fa-js"></i>
-                        <i class="fab fa-css3"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/hanoonih.png" alt="">
-                <div class="work-overlay">
-                    <div class="overlay-content">
-                        <p class="work-name">HIH</p>
-                        <i class="fab fa-figma"></i>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -189,9 +181,9 @@
             <h2 class="my-border">About Me</h2>
         </div>
         <p class="">
-            I started coding in December 2018, and I am a self-taught developer. I have a passion for modern looking
-            websites with a few animations. I love what I am doing, and I am highly motivated to collaborate with
-            someone. If you are up into some projects, just let me know!
+            I'm Hanoon Ibn Haneef, from Kerala, India 🇮🇳.
+            I started coding in March 2020, during the Covid-19 lockdown, and I a self-taught developer. I love to design and develop modern looking, professional and creative 
+            websites with a few animations. Currently I'm developing my skills by practice and side projects. If you are up into some projects, just let me know! Let's make your dream a reality!
         </p>
         <div class="title-box my-border">
             <h3>Technologies that I use</h3>
@@ -246,29 +238,61 @@
                     <h2>UI / UX Design</h2>
                     <p>It is the process of desiging the prototype of your application before coding. for Web and
                         Mobile. </p>
-                    </div>
                 </div>
-                <div class="service flex my-border">
-                    <!-- <div class="service-image">
-                        <img src="images/image1.png" alt="">
-                    </div> -->
-                    <i class="fab fa-connectdevelop fa-5x"></i>
-                    <div class="service-details">
-                        <h2>Web App Development</h2>
-                        <p>Have a good idea in your mind? Let's make it a reality. We build complex web applications.</p>
-                    </div>
-                </div>
-                <div class="service flex my-border">
-                    <!-- <div class="service-image">
+            </div>
+            <div class="service flex my-border">
+                <!-- <div class="service-image">
                         <img src="images/image1.jpg" alt="">
                     </div> -->
-                    <i class="fas fa-laptop-code fa-5x"></i>
+                <i class="fas fa-user-shield fa-5x"></i>
+                <div class="service-details">
+                    <h2>Potfolio Website</h2>
+                    <p>In this digital era, Every professional and Job seeker need a website. A Portfolio website is the new resume these days. </p>
+                </div>
+            </div>
+            <div class="service flex my-border">
+                <!-- <div class="service-image">
+                        <img src="images/image1.jpg" alt="">
+                    </div> -->
+                <i class="fas fa-store fa-5x"></i>
+                <div class="service-details">
+                    <h2>Buisiness website</h2>
+                    <p>To get more customers online and make your website information online you need a website. I can help you for that.</p>
+                </div>
+            </div>
+            <div class="service flex my-border">
+                <!-- <div class="service-image">
+                        <img src="images/image1.png" alt="">
+                    </div> -->
+                <i class="fab fa-connectdevelop fa-5x"></i>
+                <div class="service-details">
+                    <h2>Web App Development</h2>
+                    <p>Have a good idea in your mind? Let's make it a reality. We build complex web applications.</p>
+                </div>
+            </div>
+            <div class="service flex my-border">
+                <!-- <div class="service-image">
+                        <img src="images/image1.jpg" alt="">
+                    </div> -->
+                <i class="fas fa-laptop-code fa-5x"></i>
                 <div class="service-details">
                     <h2>Site Maintenance</h2>
                     <p>Want someone to fix bugs in your website and maintain it with your buisiness updates? We are here
                         for you.</p>
                 </div>
             </div>
+            <div class="service flex my-border service-cta">
+                <!-- <div class="service-image">
+                        <img src="images/image1.jpg" alt="">
+                    </div> -->
+                <i class="fas fa-smile fa-5x"></i>
+                <div class="service-details">
+                    <h2>I'm Here for You!</h2>
+                    <p>Just tell me about your project with your contact details.</p>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+            
         </div>
     </section>
 
@@ -278,10 +302,11 @@
             <h2 class="my-border">Let's Connect</h2>
         </div>
         <div class="contact-form">
-            <form action="" class="grid">
-                <input type="text" placeholder="Name">
+            <form name="contact" method="POST" data-netlify="true" class="grid">
+                <input type="text" placeholder="Name" required>
                 <input type="email" placeholder="E-mail">
-                <textarea type="text-area" placeholder="Message" cols="30" rows="5"></textarea>
+                <input type="number" placeholder="Phone" required>
+                <textarea type="text-area" placeholder="Message" cols="30" rows="5" required></textarea>
                 <input type="submit" value="Submit" class="btn btn-gold">
                 <!-- <a href="" class="btn btn-gold">Submit</a> -->
             </form>
@@ -296,10 +321,11 @@
         <!-- Social icons -->
         <div class="hero-social">
             <div class="social-icons">
-                <i class="fab fa-instagram"></i>
-                <i class="fab fa-github"></i>
-                <i class="fab fa-linkedin"></i>
-                <i class="fab fa-twitter"></i>
+                <a href="https://www.instagram.com/hanoonih/" target="_blank"> <i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/HanoonIH" target="_blank"> <i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/hanoonih/" target="_blank"> <i class="fab fa-linkedin"></i></a>
+                <!-- <a href="https://twitter.com/hanoon_ih" target="_blank"> <i class="fab fa-twitter"></i></a> -->
+                <a href="mailto:hanoonih123@gmail.com" target="_blank"> <i class="fas fa-envelope"></i></a>
             </div>
         </div>
 

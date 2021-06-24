@@ -760,12 +760,12 @@ nav li a:last-child:hover {
     text-align: center;
 }
 
-input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, textarea:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, select:focus, textarea:focus {
     background-color: var(--dark-gold-color);
     color: #fff;
 }
 
-input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input[type=number]:focus::placeholder, textarea:focus::placeholder {
+input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input[type=number]:focus::placeholder, select:focus::placeholder, textarea:focus::placeholder {
     color: #fff;
 }
 
@@ -954,6 +954,9 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input
     .services {
         padding: 74px 72px 53px;
     }
+    .service-items.grid-3 {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
     .service-items {
         gap: 30px;
     }
@@ -975,7 +978,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input
     .contact {
         padding: 88px 80px 46px;
     }
-    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], .contact-form textarea {
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], select, .contact-form textarea {
         padding: 18px 0px;
         margin-bottom: 34px;
         font-size: 32px;
@@ -1227,7 +1230,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input
         gap: 25px;
     }
     .service-items.grid-3 {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         padding: 10px 0 0;
     }
     .service-details h2 {
@@ -1242,7 +1245,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input
     .contact {
         padding: 58px 50px 36px;
     }
-    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], .contact-form textarea {
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], select, .contact-form textarea {
         padding: 15.72px 0px;
         margin-bottom: 24px;
         font-size: 22px;
@@ -1453,7 +1456,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input
     .contact .section-title h2 {
         padding: 11px 25px;
     }
-    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], .contact-form textarea {
+    .contact-form input[type=text], .contact-form input[type=email], .contact-form input[type=number], select, .contact-form textarea {
         padding: 10.72px 0px;
         margin-bottom: 22px;
         border-bottom: 3px solid var(--gold-color);

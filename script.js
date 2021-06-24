@@ -80,6 +80,19 @@ window.onload = () => {
             toggleDarkTheme.innerHTML = 'Dark Theme';
         }
     });
+
+    // Form send to email
+    var contactForm = document.querySelector("form[name='contact']");
+    var submitButton = document.querySelector("input[type=submit]");
+
+    contactForm.addEventListener('change', () => {
+        console.log('filling form....');
+
+    })
+    submitButton.addEventListener('click', (e) => {
+        // e.preventDefault();
+    })
+
 }
 
 

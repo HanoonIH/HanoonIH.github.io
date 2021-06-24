@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
 
@@ -153,7 +155,7 @@
             <div class="work">
                 <a href="#" target="_blank">
                     <img src="images/Screenshot_Hanoon-IH-Full-Stack-Web-developer.png"
-                    alt="My personal portfolio website.">
+                        alt="My personal portfolio website.">
                     <div class="work-overlay">
                         <div class="overlay-content">
                             <p class="work-name">My Personal Website</p>
@@ -182,8 +184,10 @@
         </div>
         <p class="">
             I'm Hanoon Ibn Haneef, from Kerala, India 🇮🇳.
-            I started coding in March 2020, during the Covid-19 lockdown, and I a self-taught developer. I love to design and develop modern looking, professional and creative 
-            websites with a few animations. Currently I'm developing my skills by practice and side projects. If you are up into some projects, just let me know! Let's make your dream a reality!
+            I started coding in March 2020, during the Covid-19 lockdown, and I'm a self-taught developer. I love to
+            design and develop modern looking, professional and creative
+            websites with a few animations. Currently I'm developing my skills by practice and side projects. If you are
+            up into some projects, just let me know! Let's make your dream a reality!
         </p>
         <div class="title-box my-border">
             <h3>Technologies that I use</h3>
@@ -247,7 +251,8 @@
                 <i class="fas fa-user-shield fa-5x"></i>
                 <div class="service-details">
                     <h2>Potfolio Website</h2>
-                    <p>In this digital era, Every professional and Job seeker need a website. A Portfolio website is the new resume these days. </p>
+                    <p>In this digital era, Every professional and Job seeker need a website. A Portfolio website is the
+                        new resume these days. </p>
                 </div>
             </div>
             <div class="service flex my-border">
@@ -257,7 +262,8 @@
                 <i class="fas fa-store fa-5x"></i>
                 <div class="service-details">
                     <h2>Buisiness website</h2>
-                    <p>To get more customers online and make your website information online you need a website. I can help you for that.</p>
+                    <p>To get more customers online and make your website information online you need a website. I can
+                        help you for that.</p>
                 </div>
             </div>
             <div class="service flex my-border">
@@ -292,7 +298,7 @@
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
                 </div>
             </div>
-            
+
         </div>
     </section>
 
@@ -301,14 +307,48 @@
         <div class="section-title">
             <h2 class="my-border">Let's Connect</h2>
         </div>
-        <div class="contact-form">
-            <form name="contact" method="POST" data-netlify="true" class="grid">
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="E-mail">
-                <input type="number" placeholder="Phone" required>
-                <textarea type="text-area" placeholder="Message" cols="30" rows="5" required></textarea>
+        <!-- form crossroads / nikhil kilivayil sheets -->
+        <!-- <div class="contact-form">
+            <form name="contact" id="gform" class="grid">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="E-mail">
+                <input type="number" name="contact" placeholder="Phone" required>
+                <textarea type="text-area" name="message" placeholder="Message" cols="30" rows="5" required></textarea>
                 <input type="submit" value="Submit" class="btn btn-gold">
-                <!-- <a href="" class="btn btn-gold">Submit</a> -->
+            </form>
+            <script>
+                $("#gform").submit((e) => {
+                    e.preventDefault()
+                    $.ajax({
+                        url: "https://script.google.com/macros/s/AKfycbzxXWQwTQ2ngtEtqU3no0lqWyuA0gNMiYoJrhilUt6Zrpkp_fJ4ovwEkkPbvzLXxveSPg/exec",
+                        data: $("#gform").serialize(),
+                        method: "post",
+                        success: function (response) {
+                            alert("Form submitted successfully, I'll reach you soon!")
+                            window.location.reload();
+                        },
+                        error: function (err) {
+                            alert("There's an error with submiting your form.")
+                        }
+                    })
+                })
+            </script>
+        </div> -->
+
+        <!-- form formsubmit.co / ania kubow -->
+        <div class="contact-form">
+            <form name="contact" id="gform" class="grid" action="https://formsubmit.co/hanoonih123@gmail.com" method="POST">
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Form from mySite!">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="E-mail" >
+                <input type="number" name="contact" placeholder="Phone" required>
+                <textarea type="text-area" name="message" placeholder="Message" cols="30" rows="5" required></textarea>
+
+                <input type="hidden" name="_next" value="https://hanoonih.github.io/thanks.html">
+
+                <input type="submit" value="Submit" class="btn btn-gold">
             </form>
         </div>
     </section>

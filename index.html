@@ -62,13 +62,19 @@
     <!-- Hero -->
     <section class="hero container my-border mb-60">
         <div class="grid-3">
-            <div class="hero-text">
+            <div class="hero-text" style="position: relative;">
                 <p>Hi &#128075 I’m</p>
                 <h1>Hanoon IH.<br>
-                    Full Stack <br>
+                    <span class="fron-end-h1">Full Stack </span> <br>
                     Web Developer.
                 </h1>
                 <a href="#work" class="btn btn-outline">See My Work </a>
+                <!-- <div class="tooltip">
+                    <span class="tooltip-text">Full-Stack Loading...</span>
+                    <div class="progress">
+                        <div class="progress-value"></div>
+                    </div>
+                </div> -->
             </div>
             <div class="hero-img">
                 <div class="hero-img-bg"></div>
@@ -337,12 +343,13 @@
 
         <!-- form formsubmit.co / ania kubow -->
         <div class="contact-form">
-            <form name="contact" id="gform" class="grid" action="https://formsubmit.co/hanoonih123@gmail.com" method="POST">
+            <form name="contact" id="gform" class="grid" action="https://formsubmit.co/hanoonih123@gmail.com"
+                method="POST">
                 <input type="hidden" name="_template" value="box">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="New Form from mySite!">
                 <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="E-mail" >
+                <input type="email" name="email" placeholder="E-mail">
                 <input type="number" name="contact" placeholder="Phone" required>
                 <textarea type="text-area" name="message" placeholder="Message" cols="30" rows="5" required></textarea>
 

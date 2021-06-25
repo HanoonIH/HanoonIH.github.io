@@ -333,6 +333,67 @@ p {
     margin-bottom: 15px;
 }
 
+/* Tooltip fullstack */
+.tooltip {
+    visibility: hidden;
+    background-color: var(--dark-gold-color);
+
+    padding: 10px 15px;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    top: 100px;
+}
+
+.tooltip-text {
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'roboto';
+    margin-bottom: 5px;
+}
+
+.hero-text:hover .tooltip {
+    visibility: visible;
+}
+
+.hero-text:hover .tooltip .progress-value {
+    animation: load 3s normal forwards;
+}
+
+.progress {
+    background: rgba(255, 255, 255, 0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 8px;
+    width: 100%;
+}
+
+.progress-value {
+
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #fff;
+    height: 5px;
+    width: 0;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 68%;
+    }
+}
+/*  */
+
 .hero-text .btn {
     font-size: 23px;
 }
@@ -1090,6 +1151,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input
         line-height: 67px;
         text-align: center;
         margin-bottom: 25px;
+        margin-right: 0;
     }
     .hero-img {
         margin-top: 45px;
@@ -1331,7 +1393,7 @@ input[type=text]:focus::placeholder, input[type=email]:focus::placeholder, input
     /* Nav screen */
     .nav-screen {
         padding: 30px 0;
-        height: fit-content;
+        height: 100vh;
     }
     nav li a {
         font-size: 30px;

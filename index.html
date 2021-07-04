@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Animate On Scroll -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
@@ -62,10 +65,10 @@
     <!-- Hero -->
     <section class="hero container my-border mb-60">
         <div class="grid-3">
-            <div class="hero-text" style="position: relative;">
+            <div class="hero-text" style="position: relative;" >
                 <p>Hi &#128075 I’m</p>
                 <h1>Hanoon IH.<br>
-                    <span class="fron-end-h1">Full Stack </span> <br>
+                    <span class="fron-end-h1">Front End </span> <br>
                     Web Developer.
                 </h1>
                 <a href="#work" class="btn btn-outline">See My Work </a>
@@ -76,7 +79,7 @@
                     </div>
                 </div> -->
             </div>
-            <div class="hero-img">
+            <div class="hero-img" data-aos="fade-up-left">
                 <div class="hero-img-bg"></div>
                 <img src="images/me1.jpg" alt="">
             </div>
@@ -134,7 +137,7 @@
             <h2 class="my-border">My Works</h2>
         </div>
         <div class="work-items grid">
-            <div class="work">
+            <div class="work" data-aos="fade-up">
                 <a href="https://knmmadrasa.netlify.app/" target="_blank">
                     <img src="images/Screenshot_2021-06-22 Madrasa.png"
                         alt="KNM  online madrasa all videos @ one place app.">
@@ -148,7 +151,7 @@
                     </div>
                 </a>
             </div>
-            <div class="work">
+            <div class="work" data-aos="fade-up">
                 <a href="https://hanoonih.github.io/Covid19-India-live-statistics/" target="_blank">
                     <img src="images/Screenshot_2021-06-22 Covid-19-India Live.png" alt="Covid-19 India Live Tracker.">
                     <div class="work-overlay">
@@ -158,7 +161,7 @@
                     </div>
                 </a>
             </div>
-            <div class="work">
+            <div class="work" data-aos="fade-up">
                 <a href="#" target="_blank">
                     <img src="images/Screenshot_Hanoon-IH-Full-Stack-Web-developer.png"
                         alt="My personal portfolio website.">
@@ -169,7 +172,7 @@
                     </div>
                 </a>
             </div>
-            <div class="work">
+            <div class="work" data-aos="fade-up">
                 <a href="https://hanoonih.github.io/" target="_blank">
                     <img src="images/Screenshot_2021-06-22 Hanoon Ibn Haneef.png" alt="My first website">
                     <div class="work-overlay">
@@ -239,7 +242,7 @@
             <h2 class="my-border">Services</h2>
         </div>
         <div class="service-items grid-3">
-            <div class="service flex my-border">
+            <div class="service flex my-border" data-aos="fade-up">
                 <!-- <div class="service-image">
                     <img src="images/image1.jpg" alt="">
                 </div> -->
@@ -250,7 +253,7 @@
                         Mobile. </p>
                 </div>
             </div>
-            <div class="service flex my-border">
+            <div class="service flex my-border" data-aos="fade-up">
                 <!-- <div class="service-image">
                         <img src="images/image1.jpg" alt="">
                     </div> -->
@@ -261,7 +264,7 @@
                         new resume these days. </p>
                 </div>
             </div>
-            <div class="service flex my-border">
+            <div class="service flex my-border" data-aos="fade-up">
                 <!-- <div class="service-image">
                         <img src="images/image1.jpg" alt="">
                     </div> -->
@@ -272,7 +275,7 @@
                         help you for that.</p>
                 </div>
             </div>
-            <div class="service flex my-border">
+            <div class="service flex my-border" data-aos="fade-up">
                 <!-- <div class="service-image">
                         <img src="images/image1.png" alt="">
                     </div> -->
@@ -282,7 +285,7 @@
                     <p>Have a good idea in your mind? Let's make it a reality. We build complex web applications.</p>
                 </div>
             </div>
-            <div class="service flex my-border">
+            <div class="service flex my-border" data-aos="fade-up">
                 <!-- <div class="service-image">
                         <img src="images/image1.jpg" alt="">
                     </div> -->
@@ -293,7 +296,7 @@
                         for you.</p>
                 </div>
             </div>
-            <div class="service flex my-border service-cta">
+            <div class="service flex my-border service-cta" data-aos="fade-up">
                 <!-- <div class="service-image">
                         <img src="images/image1.jpg" alt="">
                     </div> -->
@@ -348,14 +351,14 @@
                 <input type="hidden" name="_template" value="box">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="New Form from mySite!">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="E-mail">
-                <input type="number" name="contact" placeholder="Phone" required>
-                <textarea type="text-area" name="message" placeholder="Message" cols="30" rows="5" required></textarea>
+                <input type="text" name="name" placeholder="Name" required data-aos="fade-up" >
+                <input type="email" name="email" placeholder="E-mail" data-aos="fade-up" >
+                <input type="number" name="contact" placeholder="Phone" required data-aos="fade-up" >
+                <textarea type="text-area" name="message" placeholder="Message" cols="30" rows="5" required data-aos="fade-up" ></textarea>
 
                 <input type="hidden" name="_next" value="https://hanoonih.github.io/thanks.html">
 
-                <input type="submit" value="Submit" class="btn btn-gold">
+                <input type="submit" value="Submit" class="btn btn-gold" data-aos="fade-up" >
             </form>
         </div>
     </section>
@@ -378,6 +381,15 @@
 
         <div class="btt"><a href="#" class="btn btn-gold"><i class="fas fa-arrow-up"></i></a></div>
     </footer>
+
+    <!-- Animate on scroll -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 150, // offset (in px) from the original trigger point
+            duration: 800,
+        });
+    </script>
 
 </body>
 
